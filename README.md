@@ -13,7 +13,8 @@ Each section includes a short description and simple installation steps (for Arc
 The most widely used bootloader across Linux distributions. It supports multiple OSes, themes, and recovery tools.
 
 ### 🔧 Installation (Arch Linux)
-```bash
+```
+bash
 sudo pacman -S grub os-prober
 sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -25,11 +26,13 @@ Description:
 A lightweight EFI boot manager that integrates tightly with systemd. Ideal for minimalist and Arch-based setups.
 
 🔧 Installation
-```bootctl --path=/boot install
+```
+bootctl --path=/boot install
 ```
 Then edit `/boot/loader/entries/arch.conf:`
 
-```title   Arch Linux
+```
+title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /initramfs-linux.img
 options root=/dev/sdX2 rw
